@@ -26,7 +26,7 @@ db.students.insertOne({
   name: "Rohan Mehta",
   department: "CSE",
   semester: 5,
-  mobile: "9876543210"
+  mobile: 9876543210
 });
 
 // ----------------------------
