@@ -5,17 +5,18 @@ db = db.getSiblingDB("examDB");
 // Exercise 1: Database & Collection Creation
 // ----------------------------
 
-// Insert at least two students
 db.students.insertOne({
   name: "Aarav Patel",
   department: "IT",
-  semester: 4
+  semester: 4,
+  mobile: 9000000001
 });
 
 db.students.insertOne({
   name: "Ananya Shah",
   department: "CE",
-  semester: 6
+  semester: 6,
+  mobile: 9000000002
 });
 
 // ----------------------------
@@ -26,7 +27,7 @@ db.students.insertOne({
   name: "Rohan Mehta",
   department: "CSE",
   semester: 5,
-  mobile: 9876543210
+  mobile: 9000000003
 });
 
 // ----------------------------
@@ -58,7 +59,8 @@ db.students.insertOne({
   _id: ObjectId(),
   name: "Pooja Verma",
   department: "IT",
-  semester: 3
+  semester: 3,
+  mobile: 9000000004
 });
 
 // ----------------------------
@@ -68,13 +70,19 @@ db.students.insertOne({
 // First insert (will succeed)
 db.students.insertOne({
   _id: ObjectId("64abc123456789abcdef0001"),
-  name: "Kunal Joshi"
+  name: "Kunal Joshi",
+  department: "ME",
+  semester: 2,
+  mobile: 9000000005
 });
 
 // Second insert with same _id (will FAIL — expected)
 db.students.insertOne({
   _id: ObjectId("64abc123456789abcdef0001"),
-  name: "Ritika Malhotra"
+  name: "Ritika Malhotra",
+  department: "ME",
+  semester: 2,
+  mobile: 9000000006
 });
 
 // ----------------------------
